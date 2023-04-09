@@ -2,7 +2,12 @@
          "0.2.2"
          "LSP Clients for Grammarly (Unofficial)")
 
+(website-url "https://github.com/emacs-grammarly/lsp-grammarly-un")
+(keywords "convenience" "lsp" "grammarly" "checker")
+
 (package-file "lsp-grammarly-un.el")
+
+(script "test" "echo \"Error: no test specified\" && exit 1")
 
 (source "gnu")
 (source "melpa")
