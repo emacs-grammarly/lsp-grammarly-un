@@ -150,7 +150,7 @@ This is only for development use."
   "Wrap function `json-encode' to convert OBJ for keytar password."
   (s-replace "\"" "\\\"" (json-encode obj)))
 
-(defun lsp-grammarly--json-read (string)
+(defun lsp-grammarly-un--json-read (string)
   "Ensure read JSON STRING avoid bad string format."
   (let ((output (or (ignore-errors (json-read-from-string string))
                     (ignore-errors (json-read-from-string (concat "\"" string "\""))))))
@@ -209,7 +209,7 @@ For argument CALLBACK, see object `lsp--client' description."
                   (keytar-get-password lsp-grammarly-un--cookie-key lsp-grammarly-un--account))))
       (when pass
         (setq lsp-grammarly-un--password-string pass
-              lsp-grammarly-un--password (lsp-grammarly--json-read pass))))
+              lsp-grammarly-un--password (lsp-grammarly-un--json-read pass))))
     (if (lsp-grammarly-un-login-p)
         (message "[INFO] Logged in as, %s" (lsp-grammarly-un--username))
       (message "[INFO] Visited as, anonymous"))))
@@ -395,7 +395,7 @@ Argument CODE is the query string from URI."
                     grauth (cdr (assoc 'grauth cookie))
                     gnar-containerId (cdr (assoc 'gnar-containerId cookie))
                     tdi (cdr (assoc 'tdi cookie)))
-              (let* ((all-data (lsp-grammarly--json-read data))
+              (let* ((all-data (lsp-grammarly-un--json-read data))
                      (user (nth 0 all-data))
                      (premium (string= "Premium" (cdr (assoc 'type user))))
                      (name (cdr (assoc 'name user)))
