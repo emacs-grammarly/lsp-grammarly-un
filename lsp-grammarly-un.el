@@ -1,4 +1,4 @@
-;;; lsp-grammarly-un.el --- LSP Clients for Unofficial Grammarly  -*- lexical-binding: t; -*-
+;;; lsp-grammarly-un.el --- LSP Clients for Grammarly (Unofficial)  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2021-2022  Shen, Jen-Chieh
 ;; Created date 2021-02-19 23:48:37
@@ -27,7 +27,7 @@
 
 ;;; Commentary:
 ;;
-;; LSP server implementation for Unofficial Grammarly
+;; LSP server implementation for Grammarly (Unofficial)
 ;;
 
 ;;; Code:
@@ -45,7 +45,7 @@
   (warn "`keytar' is required for login into Grammarly account"))
 
 (defgroup lsp-grammarly-un nil
-  "Settings for the Unofficial Grammarly Language Server.
+  "Settings for the Grammarly Language Server (Unofficial).
 
 Link: https://github.com/emacs-grammarly/unofficial-grammarly-language-server."
   :group 'lsp-mode

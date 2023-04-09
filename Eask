@@ -1,6 +1,6 @@
 (package "lsp-grammarly-un"
          "0.2.2"
-         "LSP Clients for Unofficial Grammarly")
+         "LSP Clients for Grammarly (Unofficial)")
 
 (package-file "lsp-grammarly-un.el")
 
